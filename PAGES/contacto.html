@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../SCSS/style.css">
+    <title>Contacto - Bell</title>
+</head>
+
+<body>
+
+    <body>
+        <div class="nav-container">
+            <nav>
+                <ul class="mobile-nav">
+                    <li>
+                        <div class="menu-icon-container">
+                            <div class="menu-icon">
+                                <span class="line-1"></span>
+                                <span class="line-2"></span>
+                            </div>
+                        </div>
+                    </li>
+
+
+                </ul>
+
+                <ul class="desktop-nav">
+                    <li>
+                        <a href="../index.html" class="link-logo"></a>
+                    </li>
+                    <li>
+                        <a href="#">Simulador</a>
+                    </li>
+                    <li>
+                        <a href="#">News</a>
+                    </li>
+                    <li>
+                        <a href="#">TV</a>
+                    </li>
+                    <li>
+                        <a href="#">Contacto</a>
+                    </li>
+            </nav>
+
+        </div>
+
+        <div>
+
+            <img src="../IMAGES/wall-broad-street-sign-banner_0.jpeg" class="img-fluid" alt="...">
+
+        </div>
+
+        <!-- TradingView Widget BEGIN -->
+        <div class="tradingview-widget-container" style="width: 100%; height: 76px;">
+            <div class="tradingview-widget-container__widget"></div>
+            <div class="tradingview-widget-copyright"><a href="https://es.tradingview.com/markets/" rel="noopener"
+                    target="_blank"><span class="blue-text">Markets</span></a> by TradingView</div>
+            <script type="text/javascript"
+                src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+                    {
+                        "symbols": [
+                            {
+                                "description": "S&P 500",
+                                "proName": "CURRENCYCOM:US500"
+                            },
+                            {
+                                "description": "NASDAQ",
+                                "proName": "CURRENCYCOM:US100"
+                            },
+                            {
+                                "description": "BTC/USD",
+                                "proName": "BITSTAMP:BTCUSD"
+                            },
+                            {
+                                "description": "EUR/USD",
+                                "proName": "FX_IDC:EURUSD"
+                            },
+                            {
+                                "description": "GOLD",
+                                "proName": "TVC:GOLD"
+                            },
+                            {
+                                "description": "BRENT CRUDE OIL",
+                                "proName": "FX_IDC:USDBRO"
+                            }
+                        ],
+                            "showSymbolLogo": true,
+                                "colorTheme": "light",
+                                    "isTransparent": true,
+                                        "displayMode": "adaptive",
+                                            "locale": "es"
+                    }
+                </script>
+        </div>
+        <!-- TradingView Widget END -->
+
+
+        <main>
+            <form action="" class="formulario" id="formulario">
+
+                <div class="formulario__grupo" id="grupo__usuario">
+                    <label for="usuario" class="formulario__label">Usuario</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="usuario" id="usuario"
+                            placeholder="merval123">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener
+                        numeros, letras y guion bajo.</p>
+                </div>
+
+
+                <div class="formulario__grupo" id="grupo__nombre">
+                    <label for="nombre" class="formulario__label">Nombre</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="nombre" id="nombre"
+                            placeholder="Warren Buffet">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El usuario tiene que ser de 4 a 16 dígitos y solo puede contener
+                        numeros, letras y guion bajo.</p>
+                </div>
+
+
+                <div class="formulario__grupo" id="grupo__password">
+                    <label for="password" class="formulario__label">Contraseña</label>
+                    <div class="formulario__grupo-input">
+                        <input type="password" class="formulario__input" name="password" id="password">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">La contraseña tiene que ser de 4 a 12 dígitos.</p>
+                </div>
+
+
+                <div class="formulario__grupo" id="grupo__password2">
+                    <label for="password2" class="formulario__label">Repetir Contraseña</label>
+                    <div class="formulario__grupo-input">
+                        <input type="password" class="formulario__input" name="password2" id="password2">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">Ambas contraseñas deben ser iguales.</p>
+                </div>
+
+                <!-- Grupo: Correo Electronico -->
+                <div class="formulario__grupo" id="grupo__correo">
+                    <label for="correo" class="formulario__label">Correo Electrónico</label>
+                    <div class="formulario__grupo-input">
+                        <input type="email" class="formulario__input" name="correo" id="correo"
+                            placeholder="correo@correo.com">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El correo solo puede contener letras, numeros, puntos, guiones y
+                        guion bajo.</p>
+                </div>
+
+
+                <div class="formulario__grupo" id="grupo__telefono">
+                    <label for="telefono" class="formulario__label">Teléfono</label>
+                    <div class="formulario__grupo-input">
+                        <input type="text" class="formulario__input" name="telefono" id="telefono"
+                            placeholder="4491234567">
+                        <i class="formulario__validacion-estado fas fa-times-circle"></i>
+                    </div>
+                    <p class="formulario__input-error">El telefono solo puede contener numeros y el maximo son 14
+                        dígitos.</p>
+                </div>
+
+
+                <div class="formulario__grupo" id="grupo__terminos">
+                    <label class="formulario__label">
+                        <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
+                        Acepto los Terminos y Condiciones
+                    </label>
+                </div>
+
+                <div class="formulario__mensaje" id="formulario__mensaje">
+                    <p><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Por favor rellena el formulario
+                        correctamente. </p>
+                </div>
+
+                <div class="formulario__grupo formulario__grupo-btn-enviar">
+                    <button type="submit" class="formulario__btn">Enviar</button>
+                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">Formulario enviado exitosamente!
+                    </p>
+                </div>
+            </form>
+        </main>
+
+            <section>
+                <h2 class="title">Preguntas Frecuentes</h2>
+
+                <div class="faq">
+                    <div class="question">
+                        <h3>¿Para qué me sirve calcular el Valor Presente?</h3>
+
+                        <svg width="15" height="10" viewbox="0 0 42 25">
+                            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="answer">
+                        <p>
+                            El valor presente es el valor que tiene en la actualidad una cantidad de dinero que no
+                            recibiremos ahora mismo sino más adelante, en el futuro. En el caso de proyectos, sirve para
+                            calcular si es conveniente realizar una inversión, de acuerdo a la proyección de los
+                            resultados
+                            del negocio.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq">
+                    <div class="question">
+                        <h3>¿Cómo me suscribo a Bell TV+?</h3>
+
+                        <svg width="15" height="10" viewbox="0 0 42 25">
+                            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="answer">
+                        <p>
+                            Bell TV+ todavía no ha sido lanzado de manera oficial. Tiene fecha de lanzamiento oficial en
+                            Julio de 2023 y costará 3 dólares por mes.
+                        </p>
+                    </div>
+                </div>
+
+
+
+
+
+                <div class="faq">
+                    <div class="question">
+                        <h3>¿Cuáles son los beneficios de Bell TV+ y Bell News+?</h3>
+
+                        <svg width="15" height="10" viewbox="0 0 42 25">
+                            <path d="M3 3L21 21L39 3" stroke="white" stroke-width="7" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <div class="answer">
+                        <p>
+                            Nuestra misión es facilitarte y unificarte la búsqueda de información. Por supuesto, Bell
+                            tendrá
+                            su versión gratuita pero con tiempo de permanencia limitado. Al contratar Bell TV+ y
+                            Bell News+, podrás navegar por la web todo el tiempo que necesites. Además, recibiras por
+                            correo
+                            electrónico todos los researchs de las grandes empresas; para que puedas llevar un buen
+                            seguimiento de tu portafolio.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col">
+                            <h4>Servicios</h4>
+                            <ul>
+                                <li><a href="#">Bell TV+</a></li>
+                                <li><a href="#">Bell Simulator</a></li>
+                                <li><a href="#">Bell News+</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-col">
+                            <h4>Contacto</h4>
+                            <ul>
+                                <li><a href="#">Suscribirse</a></li>
+                                <li><a href="#">Contactar Bell</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </footer>
+
+
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+            <script src="../JS/jquery-3.6.0.js"></script>
+
+            <script src="../JS/script.js"></script>
+    </body>
+
+</html>
