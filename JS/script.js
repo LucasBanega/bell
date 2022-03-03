@@ -117,51 +117,6 @@ formulario.addEventListener('submit', (e) => {
 	}
 });
 
-const btnHam = document.querySelector('.ham-btn');
-const btnTimes = document.querySelector('.times-btn');
-const navBar = document.getElementById('nav-bar');
-
-btnHam.addEventListener('click', function(){
-    if(btnHam.className !== ""){
-        btnHam.style.display = "none";
-        btnTimes.style.display = "block";
-        navBar.classList.add("show-nav");
-    }
-})
-
-btnTimes.addEventListener('click', function(){
-    if(btnHam.className !== ""){
-        this.style.display = "none";
-        btnHam.style.display = "block";
-        navBar.classList.remove("show-nav");
-    }
-});
-
-const searchButton = document.querySelector("nav .desktop-nav .link-search");
-const closeButton = document.querySelector(".search-container .link-close");
-const desktopNav = document.querySelector(".desktop-nav");
-const searchContainer = document.querySelector(".search-container");
-const overlay = document.querySelector(".overlay");
-
-searchButton.addEventListener("click", () => {
-    desktopNav.classList.add("hide");
-    searchContainer.classList.remove("hide");
-    overlay.classList.add("show");
-})
-
-closeButton.addEventListener("click", () => {
-    desktopNav.classList.remove("hide");
-    searchContainer.classList.add("hide");
-    overlay.classList.remove("show");
-})
-
-overlay.addEventListener("click", () => {
-    desktopNav.classList.remove("hide");
-    searchContainer.classList.add("hide");
-    overlay.classList.remove("show");
-})
-
-
 function doCalc()
 {
 	zeroBlanks(document.mainform);
@@ -177,18 +132,6 @@ function initForm()
 	document.mainform.elements[0].focus();
 }
 
-
-function showMenuIndicator()
-{
-	if (!document.images) return;
-	var i;
-	for (i = 0; i < document.images.length; i++)
-	{
-		if (document.images[i].name)
-			if (location.href.indexOf("/" + document.images[i].name + ".") >= 0)
-				document.images[i].src = "/images/menu/menuindicator.gif";
-	}
-}
 function getCtrlVal(ctrl)
 {
 	if (ctrl.value != null)
@@ -328,5 +271,57 @@ function presentValue(fv,r,y)
 {
 	return fv/Math.pow(1+r,y);
 }
+
+const searchButton = document.querySelector("nav .desktop-nav .link-search");
+const closeButton = document.querySelector(".search-container .link-close");
+const desktopNav = document.querySelector(".desktop-nav");
+const searchContainer = document.querySelector(".search-container");
+const overlay = document.querySelector(".overlay");
+
+searchButton.addEventListener("click", () => {
+    desktopNav.classList.add("hide");
+    searchContainer.classList.remove("hide");
+    overlay.classList.add("show");
+})
+
+closeButton.addEventListener("click", () => {
+    desktopNav.classList.remove("hide");
+    searchContainer.classList.add("hide");
+    overlay.classList.remove("show");
+})
+
+overlay.addEventListener("click", () => {
+    desktopNav.classList.remove("hide");
+    searchContainer.classList.add("hide");
+    overlay.classList.remove("show");
+})
+
+
+// Mobile Version
+
+const menuIconContainer = document.querySelector("nav .menu-icon-container");
+const navContainer = document.querySelector(".nav-container");
+
+menuIconContainer.addEventListener("click", () => {
+    navContainer.classList.toggle("active");
+})
+
+
+const searchBar = document.querySelector(".mobile-search-container .search-bar");
+const nav = document.querySelector(".nav-container nav");
+const searchInput = document.querySelector(".mobile-search-container input");
+const cancelBtn = document.querySelector(".mobile-search-container .cancel-btn");
+
+searchInput.addEventListener("click", () => {
+    searchBar.classList.add("active");
+    nav.classList.add("move-up");
+    desktopNav.classList.add("move-down");
+})
+
+cancelBtn.addEventListener("click", () => {
+    searchBar.classList.remove("active");
+    nav.classList.remove("move-up");
+    desktopNav.classList.remove("move-down");
+})
 
 
